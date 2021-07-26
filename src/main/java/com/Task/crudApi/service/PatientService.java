@@ -13,19 +13,24 @@ public class PatientService {
     private PatientRepository repository;
 //    save methods
     public Patient savePatient(Patient patient){
-       return repository.save(patient);
+
+        return repository.save(patient);
     }
-    public List<Patient> savePatient(List<Patient> patient){
+    public List<Patient> savePatient(List<Patient> patient)
+    {
         return repository.saveAll(patient);
     }
 // get methods
     public List<Patient> getPatient(){
+
         return repository.findAll();
     }
     public Patient getPatientById(int id){
+
         return repository.findById(id).orElse(null);
     }
     public Patient getPatientByName(String name){
+
         return repository.findByName(name);
     }
 //  delete method
